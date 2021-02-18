@@ -1,14 +1,55 @@
 import React from "react";
 import BaseLayout from "../components/layouts/BaseLayout";
-import { Button, Container } from "semantic-ui-react";
+import { Grid, Container } from "semantic-ui-react";
 
 const Index = () => {
   return (
-    <BaseLayout>
-      <Container>
-        <h2>this is the index page</h2>
-        <Button>Click Here</Button>
-      </Container>
+    <BaseLayout className="cover">
+      <div className="main-section">
+        <div className="background-image">
+          <img src="/images/background-index.png" />
+        </div>
+        <Container>
+          <Grid>
+            <Grid.Row>
+              <Grid.Column computer={8} mobile={16}>
+                <div className="hero-section">
+                  <div className={`flipper`}>
+                    <div className="back">
+                      <div className="hero-section-content">
+                        <h2> Full Stack Web Developer </h2>
+                        <div className="hero-section-content-intro">
+                          Have a look at my portfolio and job history.
+                        </div>
+                      </div>
+                      <img className="image" src="/images/section-1.png" />
+                      <div className="shadow-custom">
+                        <div className="shadow-inner"> </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Grid.Column>
+              <Grid.Column
+                computer={8}
+                mobile={16}
+                className="hero-welcome-wrapper"
+              >
+                <div className="hero-welcome-text">
+                  <h1>
+                    Welcome to the portfolio website of Sean Madzelonka. Get
+                    informed, collaborate and discover projects Ive been working
+                    on!
+                  </h1>
+                </div>
+                <div className="hero-welcome-bio">
+                  <h1>Let's take a look on my work.</h1>
+                </div>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
+      </div>
     </BaseLayout>
   );
 };
