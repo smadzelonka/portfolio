@@ -1,8 +1,38 @@
 @import "./shared/fonts";
 @import "./shared/index";
+
 html,
 body {
   height: 100%;
   width: 100%;
   font-family: "Montserrat", "Helvetica" !important;
 }
+
+.self-typed {
+  font-size: 31px;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.stackable {
+  margin-bottom: 0px !important;
+}
+
+.headerItem {
+  color: black !important;
+}
+
+// Sleek and futuristic
+// #2C3531
+// #116466
+// #D9B08C
+// #FFCB9A
+// #D1E8E2
+
+// Clean and Energetic
+// #5680E9
+// #84CEEB
+// #5AB9EA
+// #C1C8E4
+// #8860D0

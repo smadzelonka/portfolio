@@ -1,7 +1,16 @@
 import React from "react";
 import BaseLayout from "../components/layouts/BaseLayout";
 import { Grid, Container } from "semantic-ui-react";
+import Typed from "react-typed";
 
+const ROLES = [
+  "Developer",
+  "Tech-Lover",
+  "Team Player",
+  "React.js",
+  "Next.js",
+  "Django",
+];
 const Index = () => {
   return (
     <BaseLayout className="cover">
@@ -42,6 +51,17 @@ const Index = () => {
                     on!
                   </h1>
                 </div>
+                <Typed
+                  loop
+                  strings={ROLES}
+                  typeSpeed={70}
+                  backSpeed={70}
+                  backDelay={1000}
+                  loopCount={0}
+                  showCursor
+                  className="self-typed"
+                  cursorChar="|"
+                ></Typed>
                 <div className="hero-welcome-bio">
                   <h1>Let's take a look on my work.</h1>
                 </div>

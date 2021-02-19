@@ -22,7 +22,6 @@ class Portfolio extends React.Component {
     const { portfolio } = this.props;
     return (
       <BaseLayout>
-        {console.log(portfolio)}
         <h1>I am a portfolio page {portfolio.title}</h1>
         <p>Body: {portfolio.body}</p>
         <p>Id: {portfolio.id}</p>
