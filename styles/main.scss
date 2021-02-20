@@ -1,6 +1,6 @@
 @import "./shared/fonts";
 @import "./shared/index";
-
+@import "./shared/components/header";
 html,
 body {
   height: 100%;
@@ -21,6 +21,10 @@ body {
 
 .headerItem {
   color: black !important;
+}
+
+.absolute {
+  position: absolute;
 }
 
 // Sleek and futuristic
