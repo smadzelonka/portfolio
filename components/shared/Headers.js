@@ -8,6 +8,43 @@ const Header = () => {
   const handleItemClick = (e, { name }) => setState({ activeItem: name });
   const { activeItem } = state;
 
+  const LoginLink = () => (
+    <Menu.Item
+      name="sign-in"
+      active={activeItem === "sign-in"}
+      onClick={handleItemClick}
+      className="headerItem"
+    >
+      <Link href="#">
+        <a className="port-navbar-link">Sign-in</a>
+      </Link>
+    </Menu.Item>
+  );
+  const LogoutLink = () => (
+    <Menu.Item
+      name="log-out"
+      active={activeItem === "log-out"}
+      onClick={handleItemClick}
+      className="headerItem"
+    >
+      <Link href="#">
+        <a className="port-navbar-link">Logout</a>
+      </Link>
+    </Menu.Item>
+  );
+
+  const MenuItem = ({ name, link, showLink }) => (
+    <Menu.Item
+      name={name}
+      active={activeItem === { name }}
+      onClick={handleItemClick}
+      className="port-navbar-item"
+    >
+      <Link href={link}>
+        <a className="headerItem port-navbar-link">{showLink}</a>
+      </Link>
+    </Menu.Item>
+  );
   return (
     <Menu stackable borderless className="port-navbar port-default absolute">
       <Menu.Menu position="left">
@@ -15,84 +52,22 @@ const Header = () => {
           <img src="/images/logo1.png" />
         </Menu.Item>
 
-        <Menu.Item
-          name="home"
-          active={activeItem === "home"}
-          onClick={handleItemClick}
-          className="port-navbar-item"
-        >
-          <Link href="/">
-            <a className="headerItem port-navbar-link">Home</a>
-          </Link>
-        </Menu.Item>
+        <MenuItem name="home" link="/" showLink="Home" />
 
-        <Menu.Item
-          name="about"
-          active={activeItem === "about"}
-          onClick={handleItemClick}
-          className="port-navbar-item"
-        >
-          <Link href="/about">
-            <a className="headerItem port-navbar-link">About</a>
-          </Link>
-        </Menu.Item>
-
-        <Menu.Item
-          name="portfolios"
-          active={activeItem === "portfolios"}
-          onClick={handleItemClick}
-          className="port-navbar-item"
-        >
-          <Link href="/portfolios">
-            <a className="headerItem port-navbar-link">Portfolio</a>
-          </Link>
-        </Menu.Item>
-
-        <Menu.Item
-          name="blog"
-          active={activeItem === "blog"}
-          onClick={handleItemClick}
-          className="port-navbar-item"
-        >
-          <Link href="/blog">
-            <a className="headerItem port-navbar-link">Blog</a>
-          </Link>
-        </Menu.Item>
-
-        <Menu.Item
+        <MenuItem name="about" link="/about" showLink="About" />
+        <MenuItem name="portfolios" link="/portfolios" showLink="Portfolios" />
+        <MenuItem name="blog" link="/blog" showLink="Blog" />
+        <MenuItem
           name="git"
-          active={activeItem === "git"}
-          onClick={handleItemClick}
-          className="port-navbar-item"
-        >
-          <Link href="https://github.com/smadzelonka/">
-            <a className="headerItem port-navbar-link">GitHub</a>
-          </Link>
-        </Menu.Item>
+          link="https://github.com/smadzelonka/"
+          showLink="Github"
+        />
+        <MenuItem name="cv" link="/cv" showLink="Cv" />
       </Menu.Menu>
 
       <Menu.Menu position="right">
-        <Menu.Item
-          name="cv"
-          position="right"
-          active={activeItem === "cv"}
-          onClick={handleItemClick}
-          className="port-navbar-item"
-        >
-          <Link href="/cv">
-            <a className="headerItem port-navbar-link">CV</a>
-          </Link>
-        </Menu.Item>
-        <Menu.Item
-          name="sign-in"
-          active={activeItem === "sign-in"}
-          onClick={handleItemClick}
-          className="headerItem"
-        >
-          <Link href="#">
-            <a className="port-navbar-link">Sign-in</a>
-          </Link>
-        </Menu.Item>
+        <LoginLink />
+        <LogoutLink />
       </Menu.Menu>
     </Menu>
   );
