@@ -1,8 +1,8 @@
 import React from "react";
-import BaseLayout from "../components/layouts/BaseLayout";
+import BaseLayout from "@/components/layouts/BaseLayout";
 import { Grid, Container } from "semantic-ui-react";
 import Typed from "react-typed";
-import BasePage from "../components/BasePage";
+import BasePage from "@/components/BasePage";
 
 const ROLES = [
   "Developer",

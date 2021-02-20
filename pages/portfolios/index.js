@@ -1,8 +1,8 @@
 import React from "react";
-import BaseLayout from "../components/layouts/BaseLayout";
+import BaseLayout from "@/components/layouts/BaseLayout";
 import axios from "axios";
 import Link from "next/link";
-import BasePage from "../components/BasePage";
+import BasePage from "@/components/BasePage";
 
 // export async function getStaticProps() {
 //   let posts = [];
