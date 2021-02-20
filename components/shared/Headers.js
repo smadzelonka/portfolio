@@ -51,9 +51,7 @@ const Header = () => {
         <Menu.Item>
           <img src="/images/logo1.png" />
         </Menu.Item>
-
         <MenuItem name="home" link="/" showLink="Home" />
-
         <MenuItem name="about" link="/about" showLink="About" />
         <MenuItem name="portfolios" link="/portfolios" showLink="Portfolios" />
         <MenuItem name="blog" link="/blog" showLink="Blog" />
