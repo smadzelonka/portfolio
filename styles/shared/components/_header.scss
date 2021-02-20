@@ -3,6 +3,16 @@
   width: 100%;
   z-index: 15;
   background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
+
+  // .headerItem {
+  //   color: white !important;
+  //   font-weight: bold;
+  //   letter-spacing: 0.8px;
+  //   font-size: 18px;
+  //   text-transform: uppercase;
+  // }
 
   .port-navbar {
     &-brand {
@@ -19,7 +29,7 @@
     }
 
     &-link {
-      color: white;
+      color: white !important;
       font-weight: bold;
       letter-spacing: 0.8px;
       font-size: 18px;

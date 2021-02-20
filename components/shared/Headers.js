@@ -11,23 +11,20 @@ export default class Header extends Component {
     const { activeItem } = this.state;
 
     return (
-      <Menu
-        stackable
-        // color=""
-        className="port-navbar port-default absolute"
-      >
+      <Menu stackable borderless className="port-navbar port-default absolute">
         <Menu.Menu position="left">
           <Menu.Item>
-            <img src="/images/logo.png" />
+            <img src="/images/logo1.png" />
           </Menu.Item>
 
           <Menu.Item
             name="home"
             active={activeItem === "home"}
             onClick={this.handleItemClick}
+            className="port-navbar-item"
           >
             <Link href="/">
-              <a className="headerItem">Home</a>
+              <a className="headerItem port-navbar-link">Home</a>
             </Link>
           </Menu.Item>
 
@@ -35,9 +32,10 @@ export default class Header extends Component {
             name="about"
             active={activeItem === "about"}
             onClick={this.handleItemClick}
+            className="port-navbar-item"
           >
             <Link href="/about">
-              <a className="headerItem">About</a>
+              <a className="headerItem port-navbar-link">About</a>
             </Link>
           </Menu.Item>
 
@@ -45,9 +43,10 @@ export default class Header extends Component {
             name="portfolios"
             active={activeItem === "portfolios"}
             onClick={this.handleItemClick}
+            className="port-navbar-item"
           >
             <Link href="/portfolios">
-              <a className="headerItem">Portfolio</a>
+              <a className="headerItem port-navbar-link">Portfolio</a>
             </Link>
           </Menu.Item>
 
@@ -55,9 +54,21 @@ export default class Header extends Component {
             name="blog"
             active={activeItem === "blog"}
             onClick={this.handleItemClick}
+            className="port-navbar-item"
           >
             <Link href="/blog">
-              <a className="headerItem">Blog</a>
+              <a className="headerItem port-navbar-link">Blog</a>
+            </Link>
+          </Menu.Item>
+
+          <Menu.Item
+            name="git"
+            active={activeItem === "git"}
+            onClick={this.handleItemClick}
+            className="port-navbar-item"
+          >
+            <Link href="https://github.com/smadzelonka/">
+              <a className="headerItem port-navbar-link">GitHub</a>
             </Link>
           </Menu.Item>
         </Menu.Menu>
@@ -68,17 +79,21 @@ export default class Header extends Component {
             position="right"
             active={activeItem === "cv"}
             onClick={this.handleItemClick}
+            className="port-navbar-item"
           >
             <Link href="/cv">
-              <a className="headerItem">CV</a>
+              <a className="headerItem port-navbar-link">CV</a>
             </Link>
           </Menu.Item>
           <Menu.Item
             name="sign-in"
             active={activeItem === "sign-in"}
             onClick={this.handleItemClick}
+            className="headerItem"
           >
-            Sign-in
+            <Link href="#">
+              <a className="port-navbar-link">Sign-in</a>
+            </Link>
           </Menu.Item>
         </Menu.Menu>
       </Menu>
