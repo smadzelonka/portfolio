@@ -1,30 +1,12 @@
-import React, { useEffect } from "react";
 import BaseLayout from "@/components/layouts/BaseLayout";
-import axios from "axios";
 import Link from "next/link";
 import BasePage from "@/components/BasePage";
+import { useGetData } from "@/actions";
+import { Message, Dimmer, Loader } from "semantic-ui-react";
 
-// export async function getStaticProps() {
-//   let posts = [];
-//   try {
-//     const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
-//     // data for axios // json() for fetch
-//     posts = await res.data;
-//   } catch (error) {
-//     console.error(error);
-//   }
-//   return { props: { posts: posts.slice(0, 10) } };
-// }
+const Portfolios = () => {
+  const { data, error, loading } = useGetData("/api/v1/posts");
 
-const Portfolios = ({ posts }) => {
-  useEffect(() => {
-    async function getPosts() {
-      const res = await fetch("/api/v1/posts");
-      const data = await res.json();
-      console.log(data);
-    }
-    getPosts();
-  }, []);
   const RenderPosts = (posts) => {
     return posts.map((post) => (
       <li key={post.id}>
@@ -37,23 +19,21 @@ const Portfolios = ({ posts }) => {
   return (
     <BaseLayout>
       <BasePage>
-        <h2>this is the Portfolio page</h2>
-        <ul>{RenderPosts(posts)}</ul>
+        <h1>this is the Portfolio page</h1>
+        {loading && (
+          <Dimmer active>
+            <Loader indeterminate>Loading...</Loader>
+          </Dimmer>
+        )}
+        {data && <ul>{RenderPosts(data)}</ul>}
+        {error && (
+          <Message warning color="red">
+            {error.message}
+          </Message>
+        )}
       </BasePage>
     </BaseLayout>
   );
-};
-
-Portfolios.getInitialProps = async () => {
-  let posts = [];
-  try {
-    const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
-    // data for axios // json() for fetch
-    posts = res.data;
-  } catch (error) {
-    console.error(error);
-  }
-  return { posts: posts.slice(0, 10) };
 };
 
 export default Portfolios;
