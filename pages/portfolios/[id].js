@@ -1,16 +1,14 @@
 import React from "react";
 import BaseLayout from "@/components/layouts/BaseLayout";
 import BasePage from "@/components/BasePage";
-import { useGetData } from "@/actions";
+import { useGetPostById } from "@/actions";
 import { Message, Dimmer, Loader } from "semantic-ui-react";
 import { useRouter } from "next/router";
 
 // class based component
 const Portfolio = () => {
   const router = useRouter();
-  const { data: portfolio, error, loading } = useGetData(
-    router.query.id ? `/api/v1/posts/${router.query.id}` : null,
-  );
+  const { data: portfolio, error, loading } = useGetPostById(router.query.id);
   return (
     <BaseLayout>
       <BasePage>

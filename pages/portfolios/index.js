@@ -1,11 +1,11 @@
 import BaseLayout from "@/components/layouts/BaseLayout";
 import Link from "next/link";
 import BasePage from "@/components/BasePage";
-import { useGetData } from "@/actions";
+import { useGetPosts } from "@/actions";
 import { Message, Dimmer, Loader } from "semantic-ui-react";
 
 const Portfolios = () => {
-  const { data, error, loading } = useGetData("/api/v1/posts");
+  const { data, error, loading } = useGetPosts();
 
   const RenderPosts = (posts) => {
     return posts.map((post) => (
