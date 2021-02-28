@@ -2,10 +2,12 @@ import BaseLayout from "@/components/layouts/BaseLayout";
 import Link from "next/link";
 import BasePage from "@/components/BasePage";
 import { useGetPosts } from "@/actions";
+import { useGetUser } from "@/actions/user";
 import { Message, Dimmer, Loader } from "semantic-ui-react";
 
 const Portfolios = () => {
   const { data, error, loading } = useGetPosts();
+  const { data: dataU, loading: loadingU } = useGetUser();
 
   const RenderPosts = (posts) => {
     return posts.map((post) => (
@@ -17,7 +19,7 @@ const Portfolios = () => {
     ));
   };
   return (
-    <BaseLayout>
+    <BaseLayout user={dataU} loading={loadingU}>
       <BasePage>
         <h1>this is the Portfolio page</h1>
         {loading && (

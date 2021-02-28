@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Menu } from "semantic-ui-react";
 import Link from "next/link";
 
-const Header = () => {
+const Header = ({ user, loading, error }) => {
   const [state, setState] = useState({});
 
   const handleItemClick = (e, { name }) => setState({ activeItem: name });
@@ -15,8 +15,8 @@ const Header = () => {
       onClick={handleItemClick}
       className="headerItem"
     >
-      <Link href="#">
-        <a className="port-navbar-link">Sign-in</a>
+      <Link href="/api/v1/login">
+        <i className="port-navbar-link">Sign-in</i>
       </Link>
     </Menu.Item>
   );
@@ -27,8 +27,8 @@ const Header = () => {
       onClick={handleItemClick}
       className="headerItem"
     >
-      <Link href="#">
-        <a className="port-navbar-link">Logout</a>
+      <Link href="/api/v1/logout">
+        <i className="port-navbar-link">Logout</i>
       </Link>
     </Menu.Item>
   );
@@ -41,7 +41,7 @@ const Header = () => {
       className="port-navbar-item"
     >
       <Link href={link}>
-        <a className="headerItem port-navbar-link">{showLink}</a>
+        <i className="headerItem port-navbar-link">{showLink}</i>
       </Link>
     </Menu.Item>
   );
@@ -49,7 +49,7 @@ const Header = () => {
     <Menu stackable borderless className="port-navbar port-default absolute">
       <Menu.Menu position="left">
         <Menu.Item>
-          <img src="/images/logo1.png" />
+          <img src="/images/Octopus.svg" />
         </Menu.Item>
         <MenuItem name="home" link="/" showLink="Home" />
         <MenuItem name="about" link="/about" showLink="About" />
@@ -62,10 +62,13 @@ const Header = () => {
         />
         <MenuItem name="cv" link="/cv" showLink="Cv" />
       </Menu.Menu>
-
       <Menu.Menu position="right">
-        <LoginLink />
-        <LogoutLink />
+        {!loading && (
+          <>
+            {user && <LogoutLink />}
+            {!user && <LoginLink />}
+          </>
+        )}
       </Menu.Menu>
     </Menu>
   );

@@ -3,6 +3,7 @@ import BaseLayout from "@/components/layouts/BaseLayout";
 import { Grid, Container } from "semantic-ui-react";
 import Typed from "react-typed";
 import BasePage from "@/components/BasePage";
+import { useGetUser } from "@/actions/user";
 
 const ROLES = [
   "Developer",
@@ -13,8 +14,9 @@ const ROLES = [
   "Django",
 ];
 const Index = () => {
+  const { data, error, loading } = useGetUser();
   return (
-    <BaseLayout className="cover">
+    <BaseLayout user={data} error={error} loading={loading} className="cover">
       <BasePage>
         <div className="main-section">
           <div className="background-image">
