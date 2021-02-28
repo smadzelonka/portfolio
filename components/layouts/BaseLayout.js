@@ -2,10 +2,10 @@ import React from "react";
 import Headers from "@/components/shared/Headers";
 
 const BaseLayout = (props) => {
-  const { className, children } = props;
+  const { className, user, loading, error, children } = props;
   return (
     <div className="layout-container">
-      <Headers />
+      <Headers user={user} loading={loading} error={error} />
       <main className={`cover ${className}`}>
         <div className="wrapper">{children}</div>
       </main>
