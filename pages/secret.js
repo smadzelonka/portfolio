@@ -1,7 +1,7 @@
 import React from "react";
 import BaseLayout from "@/components/layouts/BaseLayout";
 import BasePage from "@/components/BasePage";
-import withAuth from "@/pages/hoc/withAuth";
+import withAuth from "@/hoc/withAuth";
 
 const Secret = ({ user, loading }) => {
   return (
@@ -13,4 +13,4 @@ const Secret = ({ user, loading }) => {
   );
 };
 
-export default withAuth(Secret);
+export default withAuth(Secret)();

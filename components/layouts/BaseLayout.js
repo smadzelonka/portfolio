@@ -1,14 +1,15 @@
-import React from "react";
-import Headers from "@/components/shared/Headers";
+import Header from "@/components/shared/Header";
+import { ToastContainer } from "react-toastify";
 
 const BaseLayout = (props) => {
-  const { className, user, loading, error, children } = props;
+  const { className, user, navClass = "with-bg", loading, children } = props;
   return (
     <div className="layout-container">
-      <Headers user={user} loading={loading} error={error} />
+      <Header className={navClass} user={user} loading={loading} />
       <main className={`cover ${className}`}>
         <div className="wrapper">{children}</div>
       </main>
+      <ToastContainer />
     </div>
   );
 };

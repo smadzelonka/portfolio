@@ -60,9 +60,15 @@ export const withAuth = (getData) => (role) => async ({ req, res }) => {
 
 // export default auth0;
 
-// export const isAuthorized = (user, role) => {
-//   return user && user[process.env.AUTH0_NAMESPACE + "/roles"].includes(role);
-// };
+export const isAuthorized = (user, role) => {
+  return (
+    user &&
+    user[
+      (process.env.AUTH0_NAMESPACE || "https:/portfolio-seanmadzelonka.com") +
+        "/roles"
+    ].includes(role)
+  );
+};
 
 // export const authorizeUser = async (req, res) => {
 //   const session = await auth0.getSession(req);
