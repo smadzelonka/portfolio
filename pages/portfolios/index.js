@@ -29,7 +29,7 @@ const Portfolios = ({ portfolios: initialPortfolios }) => {
   return (
     <BaseLayout user={dataU} loading={loadingU}>
       <BasePage
-        title="Newest Portfolios - Filip Jerga"
+        title="Newest Portfolios - Sean Madzelonka"
         header="Portfolios"
         className="portfolio-page"
       >
@@ -80,7 +80,7 @@ export async function getStaticProps() {
   const portfolios = json.data;
   return {
     props: { portfolios },
-    unstable_revalidate: 1,
+    revalidate: 1,
   };
 }
 
