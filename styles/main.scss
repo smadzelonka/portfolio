@@ -1,6 +1,13 @@
-@import "./shared/fonts";
-@import "./shared/index";
-@import "./shared/components/header";
+// Components
+@import "./components/header";
+
+// Pages
+@import "./index";
+@import "./portfolios";
+@import "./portfolio-detail";
+@import "./blogs";
+@import "./about";
+
 html,
 body {
   height: 100%;
@@ -8,15 +15,25 @@ body {
   font-family: "Montserrat", "Helvetica" !important;
 }
 
-@media (max-width: 991px) {
-  .base-page {
-    margin-top: 250px;
-    color: white;
+.clickable {
+  cursor: pointer;
+}
+
+.base-page {
+  padding: 150px 0;
+  color: black;
+  background-color: #ecedee;
+  min-height: 100vh;
+
+  .page-header-title {
+    font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
   }
 }
-.base-page {
-  padding-top: 150px;
-  color: white;
+
+.absolute {
+  position: absolute;
 }
 
 .self-typed {
@@ -24,17 +41,18 @@ body {
   color: white;
   font-weight: bold;
   letter-spacing: 2px;
-  line-height: normal;
 }
 
-.stackable {
-  margin-bottom: 0px !important;
-}
+.avatar-box {
+  img {
+    height: 50px;
+    border-radius: 50%;
+  }
 
-.absolute {
-  position: absolute;
+  .subtitle {
+    font-size: 14px;
+  }
 }
-
 // Sleek and futuristic
 // #2C3531
 // #116466

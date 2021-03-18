@@ -1,4 +1,39 @@
 // Index -----------
+
+.cover.cover-orange {
+  background-image: linear-gradient(45deg, rgb(17, 102, 40), rgb(44, 53, 49));
+}
+
+.flipper {
+  height: 100%;
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+
+.flipper.isFlipping {
+  transform: rotateY(-180deg);
+}
+
+.front,
+.back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.front {
+  transform: rotateY(0deg);
+  z-index: 9999;
+}
+
+.back {
+  transform: rotateY(180deg);
+}
+
 .cover {
   background-image: linear-gradient(45deg, #00aeef 0%, #096fb9 100%);
   overflow: hidden;
@@ -15,11 +50,14 @@
 .main-section {
   top: 150px;
   width: 100%;
-  // padding is addressed in basepage
-  // padding: 150px 0 0;
+  padding: 150px 0 0;
 }
 
 .hero-section {
+  height: 530px;
+  width: 400px;
+
+  margin-bottom: 30px;
   h2 {
     color: white;
     font-weight: bold;
@@ -33,9 +71,9 @@
 
   &-content {
     position: absolute;
-    bottom: 20px;
-    width: 360px;
-    left: 6%;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
     z-index: 1;
 
     &-intro {
@@ -45,15 +83,25 @@
 }
 
 .image {
-  width: auto;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repat;
+  background-position: center;
+}
+
+.image-1 {
+  background-image: url("/images/section-1.jpg");
+}
+
+.image-2 {
+  background-image: url("/images/section-2.jpg");
 }
 
 .hero-welcome-text > h1 {
   color: white;
   text-transform: uppercase;
   font-size: 27px;
-  margin-top: 80px !important;
+  margin-top: 80px;
   font-weight: 300;
 }
 
@@ -76,23 +124,26 @@
   justify-content: flex-end;
 }
 
+@media (max-width: 850px) {
+  .hero-section {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+// @media (max-width: 500px) {
+//   .hero-section {
+//     display: none;
+//   }
+// }
+
 @media (max-width: 991px) {
   .hero-section {
-    width: 341px;
-
-    &-content {
-      width: 341px;
-    }
+    width: 400px;
   }
 
   .hero-welcome-text > h1 {
-    margin-top: 2rem;
-  }
-  .main-section {
-    top: 150px;
-    width: 100%;
-    padding: 0;
-    margin: 0 auto;
+    margin-top: 0px;
   }
 }
 
@@ -117,7 +168,7 @@
   }
 }
 
-.shadow-custom-2 {
-  border: 2px solid #f37d49;
+.shadow-custom-orange {
+  border: 2px solid #116466;
   box-shadow: -17px 13px 41px rgba(13, 78, 158, 0.3);
 }
