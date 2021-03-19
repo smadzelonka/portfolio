@@ -32,7 +32,7 @@ const BasePage = (props) => {
         <meta name="description" key="description" content={metaDescription} />
         <meta name="title" key="title" content={title} />
         <meta property="og:title" key="og:title" content={title} />
-        <meta property="og:locale" key="og:locale" content="en_EU" />
+        <meta property="og:locale" key="og:locale" content="en_us" />
         <meta
           property="og:url"
           key="og:url"
