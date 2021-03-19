@@ -11,7 +11,7 @@ const Cv = () => {
     <BaseLayout user={data} error={error} loading={loading}>
       <BasePage>
         <Row>
-          <Col md={{ size: 8, offset: 2 }}>
+          <Col md={12}>
             <iframe
               style={{ width: "100%", height: "800px" }}
               src="/WedDevResume.pdf"
