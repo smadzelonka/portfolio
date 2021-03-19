@@ -32,22 +32,29 @@ const Portfolio = ({ portfolio }) => {
               {!router.isFallback && (
                 <>
                   <h1 className="cover-heading">{portfolio.title}</h1>
-                  <p className="lead dates">
+                  {/* <p className="lead dates">
                     {formatDate(portfolio.startDate)} -{" "}
                     {formatDate(portfolio.endDate) || "Present"}
-                  </p>
-                  <p className="lead info mb-0">
+                  </p> */}
+                  {/* <p className="lead info mb-0">
                     {portfolio.jobTitle} | {portfolio.company} |{" "}
                     {portfolio.location}
+                  </p> */}
+                  <p className="lead info mb-0">
+                    <img
+                      src={portfolio.image}
+                      alt="portfolio image"
+                      className="index-image"
+                    />
                   </p>
                   <p className="lead">{portfolio.description}</p>
                   <p className="lead">
                     <a
-                      href={portfolio.companyWebsite}
+                      href={portfolio.githubWebsite}
                       target="_"
                       class="btn btn-lg btn-secondary"
                     >
-                      Visit Company
+                      Visit Site
                     </a>
                   </p>
                 </>

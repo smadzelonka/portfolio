@@ -53,6 +53,16 @@ body {
     font-size: 14px;
   }
 }
+
+.index-image {
+  max-height: 450px;
+}
+
+@media (max-width: 850px) {
+  .index-image {
+    max-height: 250px;
+  }
+}
 // Sleek and futuristic
 // #2C3531
 // #116466
