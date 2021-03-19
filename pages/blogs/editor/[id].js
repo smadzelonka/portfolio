@@ -8,13 +8,13 @@ import { useRouter } from "next/router";
 
 const BlogUpdateEditor = ({ user, loading }) => {
   const router = useRouter();
-  const { data } = useGetBlog(router.query.id);
-  const [updateBlog, { error, loading: isBlogSaving }] = useUpdateBlog();
+  // const { data } = useGetBlog(router.query.id);
+  // const [updateBlog, { error, loading: isBlogSaving }] = useUpdateBlog();
 
-  const _updateBlog = async (data) => {
-    await updateBlog(router.query.id, data);
-    toast.success("Blog updated!");
-  };
+  // const _updateBlog = async (data) => {
+  //   await updateBlog(router.query.id, data);
+  //   toast.success("Blog updated!");
+  // };
 
   if (error) {
     toast.error(error);
