@@ -8,15 +8,15 @@ import { useRouter } from "next/router";
 
 const BlogEditor = ({ user, loading }) => {
   const router = useRouter();
-  const [
-    createBlog,
-    { data: createdBlog, error, loading: blogLoading },
-  ] = useCreateBlog();
+  // const [
+  //   createBlog,
+  //   { data: createdBlog, error, loading: blogLoading },
+  // ] = useCreateBlog();
 
-  const saveBlog = async (data) => {
-    const createdBlog = await createBlog(data);
-    router.push("/blogs/editor/[id]", `/blogs/editor/${createdBlog._id}`);
-  };
+  // const saveBlog = async (data) => {
+  //   const createdBlog = await createBlog(data);
+  //   router.push("/blogs/editor/[id]", `/blogs/editor/${createdBlog._id}`);
+  // };
 
   if (error) {
     toast.error(error);
