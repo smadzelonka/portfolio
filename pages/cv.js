@@ -1,6 +1,7 @@
 import React from "react";
 import BaseLayout from "@/components/layouts/BaseLayout";
 import BasePage from "@/components/BasePage";
+import { Row, Col } from "reactstrap";
 import { useGetUser } from "@/actions/user";
 
 const Cv = () => {
@@ -9,7 +10,14 @@ const Cv = () => {
   return (
     <BaseLayout user={data} error={error} loading={loading}>
       <BasePage>
-        <h2>this is the index page</h2>
+        <Row>
+          <Col md={{ size: 8, offset: 2 }}>
+            <iframe
+              style={{ width: "100%", height: "800px" }}
+              src="/WedDevResume.pdf"
+            />
+          </Col>
+        </Row>
       </BasePage>
     </BaseLayout>
   );

@@ -75,6 +75,17 @@ const PortfolioForm = ({ onSubmit, initialData = {} }) => {
         />
       </div>
 
+      <div className="form-group">
+        <label htmlFor="stack">Stack</label>
+        <textarea
+          ref={register}
+          name="stack"
+          type="text"
+          className="form-control"
+          id="stack"
+        ></textarea>
+      </div>
+
       {/* <div className="form-group">
         <label htmlFor="description">Description</label>
         <input
