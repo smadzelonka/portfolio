@@ -80,7 +80,7 @@ const Index = () => {
               <Col md="6" className="hero-welcome-wrapper">
                 <div className="hero-welcome-text">
                   <h1>
-                    Welcome to the portfolio website of Sean Madzelonka. Get
+                    Come Checkout my portfolio website, I'm Sean Madzelonka. Get
                     informed, collaborate and discover projects Ive been working
                     on!
                   </h1>
@@ -97,7 +97,7 @@ const Index = () => {
                   cursorChar="|"
                 />
                 <div className="hero-welcome-bio">
-                  <h1>Let's take a look on my work.</h1>
+                  <h2>Let's take a look on my work.</h2>
                 </div>
               </Col>
             </Row>
