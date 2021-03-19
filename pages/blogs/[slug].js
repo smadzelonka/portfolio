@@ -1,33 +1,33 @@
 import BaseLayout from "@/components/layouts/BaseLayout";
-import BasePage from "@/components/BasePage";
-import { Row, Col } from "reactstrap";
+// import BasePage from "@/components/BasePage";
+// import { Row, Col } from "reactstrap";
 import { useGetUser } from "@/actions/user";
 // import { SlateView } from 'slate-simple-editor';
-import Avatar from "components/shared/Avatar";
+// import Avatar from "components/shared/Avatar";
 
-import BlogApi from "lib/api/blogs";
+// import BlogApi from "lib/api/blogs";
 
 const BlogDetail = ({ blog, author }) => {
   const { data, loading } = useGetUser();
   return (
     <BaseLayout user={data} loading={loading}>
-      <BasePage
-        title={`${blog.title} - Filip Jerga`}
+      {/* <BasePage
+        title={`${blog.title} - Sean Madzelonka`}
         metaDescription={blog.subTitle}
         className="slate-container"
       >
         <Row>
           <Col md={{ size: 8, offset: 2 }}>
-            {/* <Avatar
+            <Avatar
               title={author.name}
               image={author.picture}
               date={blog.createdAt}
-            /> */}
+            />
             <hr />
-            {/* <SlateView initialContent={blog.content} /> */}
+            <SlateView initialContent={blog.content} />
           </Col>
         </Row>
-      </BasePage>
+      </BasePage> */}
     </BaseLayout>
   );
 };
