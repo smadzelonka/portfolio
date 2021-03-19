@@ -27,27 +27,28 @@ const About = () => {
         <Row className="mt-5">
           <Col md="6">
             <div className="left-side">
-              <h1 className={`title ${createFadeInClass()}`}>Hello, Welcome</h1>
+              <h1 className={`title ${createFadeInClass()}`}>Welcome</h1>
               <h4 className={`subtitle ${createFadeInClass()}`}>
-                To About Page
+                I'm Sean Madzelonka
               </h4>
               <p className={`subsubTitle ${createFadeInClass()}`}>
-                Feel free to read short description about me.
+                Feel free to read up a little about me.
               </p>
             </div>
           </Col>
           <Col md="6">
             <div className={`${createFadeInClass()}`}>
               <p>
-                My name is Sean Madzelonka and I am an experienced software
-                engineer and freelance developer.{" "}
+                I am an experienced software engineer and freelance developer. I
+                have a strong understanding of Javascript and python
+                programming.{" "}
               </p>
               <p>
                 I have a recently finished General Assembly's software
-                engineering impressive program and im ready to take what I
+                engineering immersive program and im ready to take what I
                 learned and bring it to all of my future projects.
               </p>
-              <p>feel out more here</p>
+              {/* <p>feel out more here</p> */}
             </div>
           </Col>
         </Row>

@@ -7,11 +7,14 @@ import { useGetUser } from "@/actions/user";
 
 const ROLES = [
   "Developer",
-  "Tech Lover",
-  "Team Player",
+  "Next.js",
+  "Django",
   "Python",
   "React.js",
   "Javascript",
+  "Apollo",
+  "REST",
+  "GraphQL",
 ];
 const Index = () => {
   const [isFlipping, setIsFlipping] = useState(false);
@@ -39,7 +42,7 @@ const Index = () => {
       <BasePage indexPage title="Portfolio - Sean Madzelonka">
         <div className="main-section">
           <div className="background-image">
-            <img src="/images/background-index.png" />
+            <img src="/images/background-index.png" alt="background image" />
           </div>
           <Container>
             <Row>
@@ -48,7 +51,11 @@ const Index = () => {
                   <div className={`flipper ${isFlipping ? "isFlipping" : ""}`}>
                     <div className="front">
                       <div className="image image-1">
-                        <img className="image" src="/images/section-1.png" />
+                        <img
+                          className="image"
+                          src="/images/section-1.png"
+                          alt="Image for site"
+                        />
                         <div className="hero-section-content">
                           <h2> Full Stack Developer </h2>
                           <div className="hero-section-content-intro">
@@ -62,9 +69,13 @@ const Index = () => {
                     </div>
                     <div className="back">
                       <div className="image image-2">
-                        <img className="image" src="/images/section-2.png" />
+                        <img
+                          className="image"
+                          src="/images/section-2.png"
+                          alt="image of programing octopus"
+                        />
                         <div className="hero-section-content">
-                          <h2>React and Next is Amazing!</h2>
+                          <h2>Up and coming Software Engineer</h2>
                           <div className="hero-section-content-intro">
                             Software developer ready for a project of any type!
                           </div>
