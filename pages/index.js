@@ -78,6 +78,9 @@ const Index = () => {
                           <h2>Up and coming Software Engineer</h2>
                           <div className="hero-section-content-intro">
                             Software developer ready for a project of any type!
+                            I currently have more extensive knowledge of
+                            javascript and python programming, but I will strive
+                            to continue learning
                           </div>
                         </div>
                       </div>
@@ -91,9 +94,9 @@ const Index = () => {
               <Col md="6" className="hero-welcome-wrapper">
                 <div className="hero-welcome-text">
                   <h1>
-                    Come Checkout my portfolio website, I'm Sean Madzelonka. Get
-                    informed, collaborate and discover projects Ive been working
-                    on!
+                    Come Checkout my portfolio website, I'm Sean Madzelonka and
+                    this is my portfolio website. Where you can get informed,
+                    collaborate and discover projects Ive been working on!
                   </h1>
                 </div>
                 <Typed
@@ -108,7 +111,10 @@ const Index = () => {
                   cursorChar="|"
                 />
                 <div className="hero-welcome-bio">
-                  <h2>Let's take a look on my work.</h2>
+                  <h2>
+                    Im super excited to have you here, so lets take a look on my
+                    work.
+                  </h2>
                 </div>
               </Col>
             </Row>
