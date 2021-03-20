@@ -79,8 +79,8 @@ const Index = () => {
                           <div className="hero-section-content-intro">
                             Software developer ready for a project of any type!
                             I currently have more extensive knowledge of
-                            javascript and python programming, but I will strive
-                            to continue learning
+                            javascript and python programming. As always I will
+                            strive to continue learning so stay connected.
                           </div>
                         </div>
                       </div>
@@ -95,7 +95,7 @@ const Index = () => {
                 <div className="hero-welcome-text">
                   <h1>
                     Come Checkout my portfolio website, I'm Sean Madzelonka and
-                    this is my portfolio website. Where you can get informed,
+                    this is my portfolio. Where you can get informed,
                     collaborate and discover projects Ive been working on!
                   </h1>
                 </div>
