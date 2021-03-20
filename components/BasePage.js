@@ -17,7 +17,7 @@ const BasePage = (props) => {
     className = "",
     header,
     title = "Portfolio - Sean Madzelonka",
-    metaDescription = "My name is Sean Madzelonka and I am an experienced software engineer and freelance developer.",
+    metaDescription = "My name is Sean Madzelonka and I am an experienced software engineer and freelance developer. I have a strong understanding of Javascript and python programming",
     canonicalPath,
     children,
   } = props;
