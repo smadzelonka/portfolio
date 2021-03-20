@@ -59,7 +59,9 @@ const Index = () => {
                         <div className="hero-section-content">
                           <h2> Full Stack Developer </h2>
                           <div className="hero-section-content-intro">
-                            Have a look at my portfolio and job history.
+                            Have a look at my portfolio and job history. Where
+                            you can get informed, collaborate and discover
+                            projects Ive been working on!
                           </div>
                         </div>
                       </div>
@@ -95,8 +97,7 @@ const Index = () => {
                 <div className="hero-welcome-text">
                   <h1>
                     Come Checkout my portfolio website, I'm Sean Madzelonka and
-                    this is my portfolio. Where you can get informed,
-                    collaborate and discover projects Ive been working on!
+                    this is my portfolio.
                   </h1>
                 </div>
                 <Typed
