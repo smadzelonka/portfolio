@@ -31,6 +31,8 @@ const BasePage = (props) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta name="description" key="description" content={metaDescription} />
         <meta name="title" key="title" content={title} />
+        <meta http-equiv="content-language" content="en"></meta>
+        {/* https://ogp.me/ */}
         <meta property="og:title" key="og:title" content={title} />
         <meta property="og:locale" key="og:locale" content="en_US" />
         <meta
