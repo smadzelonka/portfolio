@@ -113,8 +113,8 @@ const Index = () => {
                 />
                 <div className="hero-welcome-bio">
                   <h2>
-                    Im super excited to have you here, so lets take a look on my
-                    work.
+                    I'm super excited to have you here, so lets take a look on
+                    my work.
                   </h2>
                 </div>
               </Col>
