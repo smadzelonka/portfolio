@@ -95,10 +95,7 @@ const Index = () => {
               </Col>
               <Col md="6" className="hero-welcome-wrapper">
                 <div className="hero-welcome-text">
-                  <h1>
-                    Come Checkout my portfolio website, I'm Sean Madzelonka and
-                    this is my portfolio.
-                  </h1>
+                  <h1>I'M SEAN MADZELONKA AND THIS IS MY PORTFOLIO.</h1>
                 </div>
                 <Typed
                   loop
@@ -113,7 +110,7 @@ const Index = () => {
                 />
                 <div className="hero-welcome-bio">
                   <h2>
-                    I'm super excited to have you here, so lets take a look on
+                    I'm super excited to have you here, so lets take a look at
                     my work.
                   </h2>
                 </div>

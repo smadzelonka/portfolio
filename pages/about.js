@@ -44,9 +44,9 @@ const About = () => {
                 programming.{" "}
               </p>
               <p>
-                I have a recently finished General Assembly's software
-                engineering immersive program and im ready to take what I
-                learned and bring it to all of my future projects.
+                I have recently finished General Assembly's software engineering
+                immersive program and im ready to take what I learned and bring
+                it to all of my future projects.
               </p>
               {/* <p>feel out more here</p> */}
             </div>
