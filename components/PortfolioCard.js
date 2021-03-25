@@ -6,7 +6,7 @@ import {
   CardTitle,
   CardImg,
   CardImgOverlay,
-  CardLink,
+  // CardLink,
 } from "reactstrap";
 
 const PortfolioCard = ({ portfolio, children }) => (
@@ -19,14 +19,14 @@ const PortfolioCard = ({ portfolio, children }) => (
       <CardBody>
         {/* FIXME change to back ground and git image */}
         {/* <p className="portfolio-card-city">{portfolio.location}</p> */}
-        <CardLink href={portfolio.githubWebsite}>
-          <CardTitle className="portfolio-card-title">
-            {portfolio.title}
-          </CardTitle>
-          <CardText className="portfolio-card-text">
-            {portfolio.description}
-          </CardText>
-        </CardLink>
+        {/* <CardLink href={portfolio.githubWebsite}> */}
+        <CardTitle className="portfolio-card-title">
+          {portfolio.title}
+        </CardTitle>
+        <CardText className="portfolio-card-text">
+          {portfolio.description}
+        </CardText>
+        {/* </CardLink> */}
         {children}
       </CardBody>
     </CardImgOverlay>
