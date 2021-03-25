@@ -82,7 +82,7 @@ const Index = () => {
                             Software developer ready for a project of any type!
                             I currently have more extensive knowledge of
                             javascript and python programming. As always I will
-                            strive to continue learning so stay connected.
+                            strive to continue learning, so stay connected.
                           </div>
                         </div>
                       </div>
