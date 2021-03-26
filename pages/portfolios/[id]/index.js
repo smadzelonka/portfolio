@@ -57,15 +57,19 @@ const Portfolio = ({ portfolio }) => {
                       Visit Site
                     </a>
                   </p>
-                  <p className="lead">
-                    <a
-                      href={portfolio.website}
-                      target="_"
-                      class="btn btn-lg btn-secondary"
-                    >
-                      Visit Repo
-                    </a>
-                  </p>
+                  {portfolio.website ? (
+                    <p className="lead">
+                      <a
+                        href={portfolio.website}
+                        target="_"
+                        class="btn btn-lg btn-secondary"
+                      >
+                        Visit Repo
+                      </a>
+                    </p>
+                  ) : (
+                    <></>
+                  )}
                 </>
               )}
             </main>
