@@ -52,9 +52,19 @@ const PortfolioForm = ({ onSubmit, initialData = {} }) => {
           id="company"
         />
       </div> */}
-
       <div className="form-group">
         <label htmlFor="website">Project Website</label>
+        <input
+          ref={register}
+          name="website"
+          type="text"
+          className="form-control"
+          id="website"
+        />
+      </div>
+
+      <div className="form-group">
+        <label htmlFor="githubWebsite">Project Website</label>
         <input
           ref={register}
           name="githubWebsite"
