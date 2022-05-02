@@ -76,6 +76,10 @@ const BasePage = (props) => {
             canonicalPath ? canonicalPath : router.asPath
           }`}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
       </Head>
       <div className={`${pageType} ${className}`}>
         <Wrapper>
