@@ -24,6 +24,20 @@ const BasePage = (props) => {
 
   const pageType = indexPage ? "index-page" : "base-page";
   const Wrapper = noWrapper ? React.Fragment : Container;
+  const schemaData = {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    name: "Sean Madzelonka",
+    url: "http://seanmadzelonka.com",
+    sameAs: [
+      "https://www.facebook.com/sean.madzelonka",
+      "https://twitter.com/seanmadzelonka?lang=en",
+      "https://www.instagram.com/seanmadzelonka/?hl=en",
+      "https://www.linkedin.com/in/seanmadzelonka",
+      "https://github.com/smadzelonka",
+    ],
+  };
+
   return (
     <>
       <Head>
