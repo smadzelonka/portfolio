@@ -26,7 +26,7 @@ const BasePage = (props) => {
   const Wrapper = noWrapper ? React.Fragment : Container;
   const schemaData = {
     "@context": "http://schema.org",
-    "@type": "Organization",
+    "@type": "Person",
     name: "Sean Madzelonka",
     url: "http://seanmadzelonka.com",
     sameAs: [
